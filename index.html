@@ -1,19 +1,21 @@
-```html
+
 <!DOCTYPE html>
-<html lang="cnr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MOVA — Događaji i iskustva u Crnoj Gori</title>
-
     <meta
         name="description"
-        content="MOVA povezuje ljude, kompanije i zajednice kroz događaje, aktivnosti i iskustva u Podgorici i širom Crne Gore."
+        content="MOVA is a Montenegro-based event and experience brand connecting people across business, technology, sports, creativity and lifestyle. Based in Podgorica, Montenegro."
     >
 
+    <meta name="theme-color" content="#10110f">
+
     <meta name="geo.region" content="ME-16">
-    <meta name="geo.placename" content="Podgorica, Crna Gora">
+    <meta name="geo.placename" content="Podgorica, Montenegro">
+
+    <title>MOVA — Events & Experiences in Montenegro</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,20 +26,22 @@
     >
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Navigacija -->
-    <header class="header">
-        <nav class="nav container">
-            <a href="#pocetna" class="logo" aria-label="MOVA — Početna">
-                MOVA<span>.</span>
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a href="#home" class="logo" aria-label="MOVA home">
+                MOVA<span class="logo-dot">.</span>
             </a>
 
             <button
                 class="menu-toggle"
-                aria-label="Otvori navigaciju"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
                 aria-expanded="false"
                 aria-controls="nav-links"
             >
@@ -46,446 +50,525 @@
             </button>
 
             <div class="nav-links" id="nav-links">
-                <a href="#o-nama">O nama</a>
-                <a href="#dogadjaji">Događaji</a>
-                <a href="#pristup">Naš pristup</a>
-                <a href="#saradnja">Saradnja</a>
-                <a href="#kontakt" class="nav-cta">Kontaktiraj nas <span>↗</span></a>
+                <a href="#about">About</a>
+                <a href="#experiences">Experiences</a>
+                <a href="#approach">Our approach</a>
+                <a href="#contact" class="nav-cta">
+                    Let's connect <span>↗</span>
+                </a>
             </div>
         </nav>
     </header>
 
-
     <main>
 
-        <!-- Početna -->
-        <section class="hero" id="pocetna">
-            <div class="container hero-grid">
+        <!-- Hero -->
+        <section class="hero container" id="home">
+            <div class="hero-copy">
 
-                <div class="hero-content">
-                    <div class="eyebrow">
-                        <span class="status-dot"></span>
-                        PODGORICA, CRNA GORA
-                    </div>
-
-                    <h1>
-                        Različiti svjetovi.<br>
-                        <span>Jedno mjesto</span><br>
-                        za povezivanje.
-                    </h1>
-
-                    <p class="hero-description">
-                        MOVA stvara događaje koji okupljaju ljude oko zajedničkih
-                        interesovanja, novih ideja i nezaboravnih iskustava.
-                        Od sporta i tehnologije do biznisa i kulture —
-                        stvaramo prostor za upoznavanje, saradnju i nova poznanstva.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="#dogadjaji" class="btn btn-primary">
-                            Otkrij MOVA koncept <span>↗</span>
-                        </a>
-
-                        <a href="#o-nama" class="btn btn-secondary">
-                            Upoznaj nas
-                        </a>
-                    </div>
-
-                    <div class="hero-note">
-                        <span class="note-line"></span>
-                        Povezujemo ljude i ideje širom Crne Gore.
-                    </div>
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    PODGORICA, MONTENEGRO
                 </div>
 
-                <div class="hero-visual">
-                    <div class="orbit orbit-one"></div>
-                    <div class="orbit orbit-two"></div>
-                    <div class="orbit orbit-three"></div>
+                <h1>
+                    Different worlds.<br>
+                    <span>One place</span><br>
+                    to connect.
+                </h1>
 
-                    <div class="orbit-center">
-                        <span>M</span>
-                    </div>
+                <p class="hero-description">
+                    MOVA is an event and experience brand created for
+                    the Montenegrin market. We bring people together
+                    through experiences that inspire connection, spark
+                    ideas and create lasting memories.
+                </p>
 
-                    <div class="orbit-label orbit-label-top">
-                        <span class="label-dot"></span>
-                        LJUDI
-                    </div>
+                <div class="hero-actions">
+                    <a href="#experiences" class="button button-primary">
+                        Explore MOVA <span>↘</span>
+                    </a>
 
-                    <div class="orbit-label orbit-label-right">
-                        <span class="label-dot"></span>
-                        IDEJE
-                    </div>
-
-                    <div class="orbit-label orbit-label-bottom">
-                        <span class="label-dot"></span>
-                        ISKUSTVA
-                    </div>
-
-                    <div class="orbit-label orbit-label-left">
-                        <span class="label-dot"></span>
-                        ENERGIJA
-                    </div>
+                    <a href="#about" class="text-link">
+                        Discover our story <span>↗</span>
+                    </a>
                 </div>
 
+                <div class="hero-footnote">
+                    <span class="mini-line"></span>
+                    CONNECTING PEOPLE ACROSS MONTENEGRO
+                </div>
             </div>
 
-            <div class="hero-bottom container">
-                <span>VIŠE OD DOGAĐAJA</span>
-                <span class="hero-bottom-line"></span>
-                <span>POVEZIVANJE KOJE IMA SMISAO</span>
+            <div class="hero-visual" aria-label="Abstract MOVA brand graphic">
+                <div class="visual-orbit orbit-one"></div>
+                <div class="visual-orbit orbit-two"></div>
+                <div class="visual-orbit orbit-three"></div>
+
+                <div class="visual-center">
+                    <span>M</span>
+                </div>
+
+                <div class="orbit-label label-top">IDEAS</div>
+                <div class="orbit-label label-right">PEOPLE</div>
+                <div class="orbit-label label-bottom">ENERGY</div>
+                <div class="orbit-label label-left">EXPERIENCE</div>
+
+                <div class="visual-note">
+                    <span class="note-symbol">+</span>
+                    <span>
+                        Something happens<br>
+                        when we come together.
+                    </span>
+                </div>
+
+                <span class="visual-star star-one">✳</span>
+                <span class="visual-star star-two">✳</span>
+            </div>
+
+            <div class="hero-bottom">
+                <span>EVENTS & EXPERIENCES</span>
+                <span>
+                    PODGORICA, MONTENEGRO
+                    <span class="accent">●</span>
+                </span>
             </div>
         </section>
 
+        <!-- About MOVA -->
+        <section class="intro-section" id="about">
+            <div class="container intro-grid">
 
-        <!-- O nama -->
-        <section class="section about-section" id="o-nama">
-            <div class="container">
+                <div class="section-label">
+                    <span class="section-number">01</span>
+                    <span>WHO WE ARE</span>
+                </div>
 
-                <div class="section-heading">
-                    <span class="section-label">01 / O NAMA</span>
+                <div class="intro-content">
+                    <h2>
+                        We believe the best things happen
+                        <span>when people come together.</span>
+                    </h2>
+
+                    <p>
+                        MOVA is an independent event and experience brand
+                        based in Podgorica, Montenegro, with a focus on
+                        connecting people, businesses and communities
+                        across the country.
+                    </p>
+
+                    <p>
+                        From professional gatherings and technology
+                        events to sports, creative challenges and social
+                        experiences, we create opportunities for people
+                        to meet, compete, collaborate and discover
+                        something new.
+                    </p>
+
+                    <a href="#approach" class="text-link">
+                        What moves us <span>↘</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Experiences -->
+        <section class="experiences-section container" id="experiences">
+
+            <div class="section-heading">
+                <div>
+                    <div class="section-label">
+                        <span class="section-number">02</span>
+                        <span>WHAT WE DO</span>
+                    </div>
 
                     <h2>
-                        Ne organizujemo samo događaje.
-                        <span>Stvaramo prilike za povezivanje.</span>
+                        Many interests.<br>
+                        <span>One MOVA.</span>
                     </h2>
                 </div>
 
-                <div class="about-grid">
-                    <div class="about-intro">
-                        <p class="large-text">
-                            Vjerujemo da najbolja poznanstva, ideje i saradnje
-                            nastaju kada se ljudi okupe oko nečega što ih pokreće.
-                        </p>
+                <p class="section-heading-description">
+                    Different formats, different communities, different
+                    reasons to show up. Created for people and businesses
+                    in Montenegro, with room to grow beyond.
+                </p>
+            </div>
+
+            <div class="experience-grid">
+
+                <article class="experience-card card-business">
+                    <div class="card-top">
+                        <span class="card-index">01 / BUSINESS</span>
+                        <span class="card-arrow">↗</span>
                     </div>
 
-                    <div class="about-details">
-                        <p>
-                            MOVA je brend događaja i iskustava nastao u Podgorici,
-                            sa fokusom na ljude, kompanije i zajednice u Crnoj Gori.
-                        </p>
-
-                        <p>
-                            Kroz pažljivo osmišljene aktivnosti spajamo različite
-                            oblasti interesovanja — od poslovnog umrežavanja i
-                            tehnologije do sporta, kreativnosti i druženja.
-                        </p>
-
-                        <p>
-                            Svaki događaj ima svoju ideju, ali zajednički cilj:
-                            da ljudima pruži razlog da se upoznaju, učestvuju,
-                            razmijene iskustva i nastave komunikaciju i nakon događaja.
-                        </p>
+                    <div class="card-art art-business" aria-hidden="true">
+                        <div class="business-shape shape-one"></div>
+                        <div class="business-shape shape-two"></div>
+                        <div class="business-shape shape-three"></div>
                     </div>
-                </div>
+
+                    <div class="card-content">
+                        <h3>Business & Networking</h3>
+                        <p>
+                            Bringing professionals, founders and ambitious
+                            people together to exchange ideas and build
+                            meaningful connections.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>Meetups</span>
+                            <span>Company Games</span>
+                            <span>Ideas</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="experience-card card-tech">
+                    <div class="card-top">
+                        <span class="card-index">02 / TECHNOLOGY</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+
+                    <div class="card-art art-tech" aria-hidden="true">
+                        <div class="tech-ring ring-one"></div>
+                        <div class="tech-ring ring-two"></div>
+                        <div class="tech-core">M</div>
+                        <span class="tech-point point-one"></span>
+                        <span class="tech-point point-two"></span>
+                        <span class="tech-point point-three"></span>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Tech & Innovation</h3>
+                        <p>
+                            Connecting curious minds through technology,
+                            AI, innovation and collaborative challenges.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>Tech Meetups</span>
+                            <span>AI</span>
+                            <span>Build Nights</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="experience-card card-games">
+                    <div class="card-top">
+                        <span class="card-index">03 / COMPETITION</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+
+                    <div class="card-art art-games" aria-hidden="true">
+                        <div class="game-shape game-shape-one">+</div>
+                        <div class="game-shape game-shape-two">×</div>
+                        <div class="game-shape game-shape-three">○</div>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Games & Sports</h3>
+                        <p>
+                            Team challenges and friendly competition
+                            designed to get people moving, working together
+                            and having fun.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>Company Games</span>
+                            <span>Sports Days</span>
+                            <span>Challenges</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="experience-card card-creators">
+                    <div class="card-top">
+                        <span class="card-index">04 / CREATIVITY</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+
+                    <div class="card-art art-creators" aria-hidden="true">
+                        <div class="creator-block block-one"></div>
+                        <div class="creator-block block-two"></div>
+                        <div class="creator-block block-three"></div>
+                        <div class="creator-block block-four"></div>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Creators & Culture</h3>
+                        <p>
+                            A space for creative people to collaborate,
+                            experiment, showcase their talent and turn
+                            ideas into something real.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>Creator Challenges</span>
+                            <span>Workshops</span>
+                            <span>Culture</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="experience-card card-social">
+                    <div class="card-top">
+                        <span class="card-index">05 / LIFESTYLE</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+
+                    <div class="card-art art-social" aria-hidden="true">
+                        <div class="social-circle circle-one"></div>
+                        <div class="social-circle circle-two"></div>
+                        <div class="social-circle circle-three"></div>
+                        <div class="social-circle circle-four"></div>
+                        <span class="social-plus">+</span>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Social & Lifestyle</h3>
+                        <p>
+                            Social gatherings built around good energy,
+                            new faces, music, food and shared experiences.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>Social Nights</span>
+                            <span>Cocktail Events</span>
+                            <span>Community</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="experience-card card-custom">
+                    <div class="card-top">
+                        <span class="card-index">06 / COLLABORATIONS</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+
+                    <div class="card-art art-custom" aria-hidden="true">
+                        <span class="custom-word">WHY<br>NOT?</span>
+                        <span class="custom-star">✳</span>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Brand & Custom Events</h3>
+                        <p>
+                            Tailor-made experiences, brand activations and
+                            collaborative concepts created with companies,
+                            partners and communities in Montenegro.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>Brand Activations</span>
+                            <span>Partnerships</span>
+                            <span>Custom Formats</span>
+                        </div>
+                    </div>
+                </article>
 
             </div>
         </section>
 
+        <!-- Our approach -->
+        <section class="approach-section" id="approach">
+            <div class="container approach-grid">
 
-        <!-- Događaji -->
-        <section class="section events-section" id="dogadjaji">
-            <div class="container">
-
-                <div class="section-heading section-heading-row">
-                    <div>
-                        <span class="section-label">02 / NAŠI DOGAĐAJI</span>
-
-                        <h2>
-                            Različita interesovanja.<br>
-                            <span>Zajednička energija.</span>
-                        </h2>
+                <div class="approach-heading">
+                    <div class="section-label">
+                        <span class="section-number">03</span>
+                        <span>THE MOVA APPROACH</span>
                     </div>
-
-                    <p class="section-side-text">
-                        Kreiramo različite formate događaja namijenjene ljudima,
-                        zajednicama i kompanijama u Crnoj Gori.
-                    </p>
-                </div>
-
-                <div class="events-grid">
-
-                    <article class="event-card">
-                        <div class="event-card-top">
-                            <span class="event-number">01</span>
-                            <span class="event-icon">↗</span>
-                        </div>
-
-                        <h3>Biznis i umrežavanje</h3>
-
-                        <p>
-                            Susreti preduzetnika, profesionalaca i ljudi koji žele
-                            da razmijene ideje, prošire mrežu kontakata i pokrenu saradnju.
-                        </p>
-
-                        <span class="event-tag">POSLOVNE PRILIKE</span>
-                    </article>
-
-
-                    <article class="event-card">
-                        <div class="event-card-top">
-                            <span class="event-number">02</span>
-                            <span class="event-icon">⌘</span>
-                        </div>
-
-                        <h3>Tehnologija i inovacije</h3>
-
-                        <p>
-                            Događaji koji okupljaju tehnološke entuzijaste,
-                            stručnjake i kreativne ljude oko novih ideja i rješenja.
-                        </p>
-
-                        <span class="event-tag">IDEJE I INOVACIJE</span>
-                    </article>
-
-
-                    <article class="event-card">
-                        <div class="event-card-top">
-                            <span class="event-number">03</span>
-                            <span class="event-icon">✳</span>
-                        </div>
-
-                        <h3>Sport i izazovi</h3>
-
-                        <p>
-                            Timske aktivnosti, turniri i takmičenja koja podstiču
-                            druženje, zdravu konkurenciju i zajednički doživljaj.
-                        </p>
-
-                        <span class="event-tag">TIMSKI DUH</span>
-                    </article>
-
-
-                    <article class="event-card">
-                        <div class="event-card-top">
-                            <span class="event-number">04</span>
-                            <span class="event-icon">✳</span>
-                        </div>
-
-                        <h3>Kreativnost i kultura</h3>
-
-                        <p>
-                            Prostor za stvaraoce, umjetnike i kreativne zajednice
-                            da predstave svoj rad i povežu se sa novom publikom.
-                        </p>
-
-                        <span class="event-tag">KREATIVNO IZRAŽAVANJE</span>
-                    </article>
-
-
-                    <article class="event-card">
-                        <div class="event-card-top">
-                            <span class="event-number">05</span>
-                            <span class="event-icon">◎</span>
-                        </div>
-
-                        <h3>Druženje i stil života</h3>
-
-                        <p>
-                            Neformalna okupljanja, tematske večeri i iskustva
-                            koja ljudima pružaju priliku da se upoznaju i druže.
-                        </p>
-
-                        <span class="event-tag">LJUDI I ISKUSTVA</span>
-                    </article>
-
-
-                    <article class="event-card">
-                        <div class="event-card-top">
-                            <span class="event-number">06</span>
-                            <span class="event-icon">✳</span>
-                        </div>
-
-                        <h3>Brendovi i posebni projekti</h3>
-
-                        <p>
-                            Događaji osmišljeni u saradnji sa kompanijama,
-                            partnerima i brendovima koji žele da ostvare
-                            autentičnu vezu sa svojom publikom.
-                        </p>
-
-                        <span class="event-tag">SARADNJE I PARTNERSTVA</span>
-                    </article>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- Naš pristup -->
-        <section class="section approach-section" id="pristup">
-            <div class="container">
-
-                <div class="section-heading">
-                    <span class="section-label">03 / NAŠ PRISTUP</span>
 
                     <h2>
-                        Dođi zbog iskustva.<br>
-                        <span>Ostani zbog ljudi.</span>
+                        More than<br>
+                        just showing up<span class="accent">.</span>
                     </h2>
 
-                    <p class="section-intro">
-                        Dobar događaj nije samo ono što se dešava na licu mjesta.
-                        Važno je i koga upoznamo, šta naučimo i koje mogućnosti
-                        nastanu nakon njega.
+                    <p>
+                        We create a reason to come together — and an
+                        experience worth remembering.
                     </p>
                 </div>
 
-                <div class="approach-grid">
+                <div class="approach-steps">
 
-                    <article class="approach-item">
-                        <span class="approach-number">01</span>
+                    <article class="approach-step">
+                        <span class="step-number">01</span>
 
-                        <h3>Doživi</h3>
-
-                        <p>
-                            Svaki događaj počinje idejom i aktivnošću koja okuplja
-                            ljude i daje im razlog da budu dio iskustva.
-                        </p>
-                    </article>
-
-                    <article class="approach-item">
-                        <span class="approach-number">02</span>
-
-                        <h3>Poveži se</h3>
-
-                        <p>
-                            Stvaramo okruženje u kojem su upoznavanje, razgovor
-                            i razmjena ideja prirodan dio događaja.
-                        </p>
-                    </article>
-
-                    <article class="approach-item">
-                        <span class="approach-number">03</span>
-
-                        <h3>Pokreni nešto novo</h3>
-
-                        <p>
-                            Novo poznanstvo, poslovna saradnja ili zajednička ideja
-                            mogu biti početak nečeg mnogo većeg.
-                        </p>
-                    </article>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- Saradnja -->
-        <section class="section collaboration-section" id="saradnja">
-            <div class="container">
-
-                <div class="collaboration-box">
-                    <div class="collaboration-content">
-                        <span class="section-label">04 / SARADNJA</span>
-
-                        <h2>
-                            Imate ideju?<br>
-                            <span>Hajde da je pokrenemo.</span>
-                        </h2>
-
-                        <p>
-                            Otvoreni smo za saradnju sa kompanijama, sponzorima,
-                            organizacijama, kreativcima i pojedincima koji žele
-                            da budu dio novih događaja i iskustava u Crnoj Gori.
-                        </p>
-
-                        <a href="#kontakt" class="btn btn-primary">
-                            Razgovarajmo o saradnji <span>↗</span>
-                        </a>
-                    </div>
-
-                    <div class="collaboration-visual">
-                        <div class="collab-circle collab-circle-one"></div>
-                        <div class="collab-circle collab-circle-two"></div>
-                        <div class="collab-circle collab-circle-three"></div>
-
-                        <div class="collab-center">MOVA</div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- Kontakt -->
-        <section class="section contact-section" id="kontakt">
-            <div class="container">
-
-                <div class="contact-grid">
-                    <div class="contact-content">
-                        <span class="section-label">05 / KONTAKT</span>
-
-                        <h2>
-                            Svaka dobra priča
-                            <span>počinje razgovorom.</span>
-                        </h2>
-
-                        <p>
-                            Želite da učestvujete, predložite ideju ili ostvarite
-                            saradnju sa MOVA brendom? Javite nam se.
-                        </p>
-
-                        <!-- Zamijeni adresu kada budeš imao aktivan poslovni mejl -->
-                        <a href="mailto:hello@mova.events" class="contact-link">
-                            hello@mova.events <span>↗</span>
-                        </a>
-                    </div>
-
-                    <div class="contact-info">
-                        <div class="contact-info-item">
-                            <span class="contact-label">LOKACIJA</span>
-                            <p class="location-text">Podgorica, Crna Gora</p>
-                            <p class="location-subtext">
-                                Događaji i iskustva širom Crne Gore.
+                        <div>
+                            <h3>Come for the experience</h3>
+                            <p>
+                                A challenge, an idea, a shared interest
+                                or simply the curiosity to try something new.
                             </p>
                         </div>
 
-                        <div class="contact-info-item">
-                            <span class="contact-label">OBLAST DJELOVANJA</span>
-                            <p>Ljudi, kompanije i zajednice</p>
+                        <span class="step-symbol">↗</span>
+                    </article>
+
+                    <article class="approach-step">
+                        <span class="step-number">02</span>
+
+                        <div>
+                            <h3>Connect with people</h3>
+                            <p>
+                                Meet people outside your usual circle,
+                                exchange perspectives and find common ground.
+                            </p>
                         </div>
 
-                        <div class="contact-info-item">
-                            <span class="contact-label">SARADNJA</span>
-                            <p>Partnerstva, sponzorstva i nove ideje</p>
+                        <span class="step-symbol">↗</span>
+                    </article>
+
+                    <article class="approach-step">
+                        <span class="step-number">03</span>
+
+                        <div>
+                            <h3>Leave with something more</h3>
+                            <p>
+                                A new connection, an idea, a collaboration
+                                or a memory that stays with you.
+                            </p>
                         </div>
-                    </div>
+
+                        <span class="step-symbol">↗</span>
+                    </article>
+
                 </div>
+            </div>
+        </section>
+
+        <!-- Partnerships -->
+        <section class="collab-section container">
+            <div class="collab-card">
+
+                <div class="collab-content">
+                    <div class="section-label">
+                        <span class="section-number">04</span>
+                        <span>LET'S CREATE SOMETHING</span>
+                    </div>
+
+                    <h2>
+                        Good things<br>
+                        happen <span>together.</span>
+                    </h2>
+
+                    <p>
+                        Have an idea, represent a brand or want to be part
+                        of the MOVA community in Montenegro? Let's start
+                        a conversation.
+                    </p>
+
+                    <a href="#contact" class="button button-dark">
+                        Get in touch <span>↗</span>
+                    </a>
+                </div>
+
+                <div class="collab-graphic" aria-hidden="true">
+                    <div class="collab-ring ring-a"></div>
+                    <div class="collab-ring ring-b"></div>
+                    <div class="collab-ring ring-c"></div>
+                    <span>M</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section container" id="contact">
+
+            <div class="contact-left">
+                <div class="section-label">
+                    <span class="section-number">05</span>
+                    <span>CONTACT</span>
+                </div>
+
+                <h2>
+                    Let's make<br>
+                    something <span>move.</span>
+                </h2>
+
+                <p>
+                    Partnerships, collaborations, event ideas or just
+                    want to say hello? We'd love to hear from you.
+                    Let's build something for Montenegro together.
+                </p>
+            </div>
+
+            <div class="contact-right">
+
+                <span class="contact-caption">FOR GENERAL INQUIRIES</span>
+
+                <!-- Replace with your actual email address -->
+                <a
+                    class="contact-email"
+                    href="mailto:hello@mova.events"
+                >
+                    hello@mova.events <span>↗</span>
+                </a>
+
+                <div class="contact-divider"></div>
+
+                <span class="contact-caption">FOLLOW THE JOURNEY</span>
+
+                <div class="social-links">
+                    <!-- Replace # with your actual profile URLs -->
+                    <a
+                        href="#"
+                        class="social-link"
+                        data-placeholder-link
+                    >
+                        Instagram ↗
+                    </a>
+
+                    <a
+                        href="#"
+                        class="social-link"
+                        data-placeholder-link
+                    >
+                        LinkedIn ↗
+                    </a>
+                </div>
+
+                <div class="contact-divider"></div>
+
+                <span class="contact-caption">LOCATION</span>
+
+                <p class="location-text">
+                    Podgorica, Montenegro
+                </p>
+
+                <p class="location-subtext">
+                    Events and experiences across Montenegro.
+                </p>
 
             </div>
         </section>
 
     </main>
 
-
-    <!-- Podnožje -->
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="site-footer">
         <div class="container footer-inner">
 
-            <a href="#pocetna" class="logo">
-                MOVA<span>.</span>
+            <a href="#home" class="logo footer-logo">
+                MOVA<span class="logo-dot">.</span>
             </a>
 
             <p>
-                Povezujemo ljude kroz događaje i iskustva.
+                Creating connections through experiences.
             </p>
 
-            <span class="footer-location">
-                PODGORICA, CRNA GORA
-            </span>
-
-            <span class="footer-copyright">
-                © <span id="year"></span> MOVA. Sva prava zadržana.
+            <span class="copyright">
+                © <span id="current-year"></span>
+                MOVA. All rights reserved.
             </span>
 
         </div>
     </footer>
 
-
-    <script src="script.js"></script>
-
 </body>
 </html>
-```
